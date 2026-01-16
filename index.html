@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProSite Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- Editor Sidebar -->
+        <aside class="editor-sidebar">
+            <div class="sidebar-header">
+                <h2><i class="fa-solid fa-wand-magic-sparkles"></i> ProSite</h2>
+                <p>Build your brand in seconds.</p>
+            </div>
+
+            <form id="siteForm">
+                <div class="form-group">
+                    <label>Brand Name</label>
+                    <input type="text" id="brandName" placeholder="e.g. Nexus AI" value="Nexus">
+                </div>
+
+                <div class="form-group">
+                    <label>Primary Color</label>
+                    <input type="color" id="primaryColor" value="#3b82f6">
+                </div>
+
+                <div class="form-group">
+                    <label>Hero Headline</label>
+                    <input type="text" id="heroTitle" placeholder="The Future is Here" value="Innovate with Speed">
+                </div>
+
+                <div class="form-group">
+                    <label>Hero Subtext</label>
+                    <textarea id="heroSubtitle" rows="3" placeholder="Explain your value proposition...">We help you build professional websites at the speed of thought. Just type and watch the magic happen.</textarea>
+                </div>
+
+                 <div class="form-group">
+                    <label>CTA Button Text</label>
+                    <input type="text" id="ctaText" value="Get Started">
+                </div>
+
+                <div class="form-group">
+                    <label>About Heading</label>
+                    <input type="text" id="aboutHeading" value="About Us">
+                </div>
+
+                <div class="form-group">
+                    <label>About Text</label>
+                    <textarea id="aboutText" rows="4">We are a team of dedicated professionals pushing the boundaries of what is possible on the web.</textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Contact Email</label>
+                    <input type="email" id="contactEmail" value="hello@example.com">
+                </div>
+            </form>
+
+            <div class="sidebar-footer">
+                <button id="downloadBtn" class="download-btn">
+                    <i class="fa-solid fa-download"></i> Download Website
+                </button>
+            </div>
+        </aside>
+
+        <!-- Live Preview Area -->
+        <main class="preview-container">
+            <div class="preview-header">
+                <span class="badge">Live Preview</span>
+                <div class="device-toggles">
+                    <button class="device-btn active" title="Desktop"><i class="fa-solid fa-desktop"></i></button>
+                    <!-- Future: Add mobile toggle if iframe resizing is implemented -->
+                </div>
+            </div>
+            <div class="preview-wrapper">
+                <iframe id="previewFrame" title="Site Preview"></iframe>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

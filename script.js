@@ -17,7 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Attach event listeners to all inputs
     Object.values(inputs).forEach(input => {
-        input.addEventListener('input', updatePreview);
+        ['input', 'change', 'keyup', 'paste'].forEach(eventType => {
+            input.addEventListener(eventType, updatePreview);
+        });
     });
 
     // Initial load
@@ -275,7 +277,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="nav-links">
             <a href="#about">Mission</a>
             <a href="#contact">Contact</a>
-            <a href="mailto:${data.contactEmail}" class="btn-primary" style="color:white; margin-left: 1rem;">${data.ctaText}</a>
+            <a href="#contact" class="btn-primary" style="color:white; margin-left: 1rem;">${data.ctaText}</a>
         </div>
     </nav>
 
@@ -284,7 +286,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <h1>${data.heroTitle}</h1>
             <p>${data.heroSubtitle}</p>
             <div style="margin-top: 2rem;">
-                <a href="mailto:${data.contactEmail}" class="btn-primary" style="font-size: 1.1rem; padding: 1rem 2.5rem;">${data.ctaText} -></a>
+                <a href="#contact" class="btn-primary" style="font-size: 1.1rem; padding: 1rem 2.5rem;">${data.ctaText} -></a>
             </div>
         </div>
     </header>

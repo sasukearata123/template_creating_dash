@@ -219,8 +219,17 @@ iframe {
     }
 
     .preview-container {
-        height: 800px;
-        /* Fixed height to ensure iframe expands correctly */
+        height: auto;
+        /* Allow container to grow */
+        min-height: 100vh;
+        /* Ensure it takes at least full screen */
         padding: 1rem;
+    }
+
+    .preview-wrapper {
+        height: 85vh;
+        /* Explicit height for the iframe window on mobile */
+        border: 1px solid var(--border);
+        /* Add border to define boundaries */
     }
 }

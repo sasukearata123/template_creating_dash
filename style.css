@@ -213,12 +213,9 @@ iframe {
     .editor-sidebar {
         width: 100%;
         height: auto;
-        max-height: 50vh;
-        /* Sidebar takes half screen or less */
+        /* Removed max-height to let form take full space */
         border-right: none;
         border-bottom: 1px solid var(--border);
-        overflow-y: auto;
-        /* Internal scroll if needed */
     }
 
     .preview-container {

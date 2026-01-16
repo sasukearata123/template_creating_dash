@@ -219,8 +219,8 @@ iframe {
     }
 
     .preview-container {
-        min-height: 50vh;
-        /* Ensure preview has space */
+        min-height: 85vh;
+        /* Give the preview enough height to look like a phone screen */
         padding: 1rem;
     }
 }
